@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>创建道歉卡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Long+Cang&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/common.css">
+  <link rel="stylesheet" href="/src/styles/create.css">
+</head>
+<body>
+<header>
+  <a href="/" class="logo">IAmSorry</a>
+  <a href="/gallery.html" class="nav-link">广场</a>
+</header>
+
+<main class="container">
+  <h1 class="title">嗨，我很抱歉</h1>
+  <p class="subtitle">那些你无法说出口的歉意、感激与爱意，让它们通过文字表达</p>
+
+  <form id="apologyForm">
+    <button type="submit" class="btn">写下你的歉意</button>
+
+    <div class="form-group">
+      <input type="text" id="sender" placeholder="你的名字" required>
+    </div>
+
+    <div class="form-group">
+      <input type="text" id="receiver" placeholder="向谁说抱歉" required>
+    </div>
+
+    <div class="form-group">
+      <textarea id="message" placeholder="写下你想说的话..." required></textarea>
+    </div>
+  </form>
+
+  <div id="result" class="hidden">
+    <p>道歉卡已创建！分享链接：</p>
+    <a id="shareLink" target="_blank"></a>
+    <p class="tip">链接已自动复制到剪贴板</p>
+  </div>
+</main>
+
+<script type="module" src="/src/pages/create.js"></script>
+</body>
+</html>
